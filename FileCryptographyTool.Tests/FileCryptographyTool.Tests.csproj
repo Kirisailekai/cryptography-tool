@@ -20,4 +20,9 @@
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 
+	<PropertyGroup>
+		<AssemblyName>FileCryptographyTool</AssemblyName>
+		<OutputType>test</OutputType>
+	</PropertyGroup>
+
 </Project>
