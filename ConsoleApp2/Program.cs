@@ -7,10 +7,10 @@ public class Program
     {
         if (args.Length == 0)
         {
-            Console.WriteLine("Доступные команды:");
-            Console.WriteLine("  encrypt --input <путь> --output <путь> --key <ключ>");
-            Console.WriteLine("  decrypt --input <путь> --output <путь> --key <ключ>");
-            Console.WriteLine("  generatekey --output <путь> --length <длина>");
+            Console.WriteLine("Available commands:");
+            Console.WriteLine("  encrypt --input <path> --output <path> --key <key>");
+            Console.WriteLine("  decrypt --input <path> --output <path> --key <key>");
+            Console.WriteLine("  generatekey --output <path> --length <length>");
             return;
         }
 
@@ -29,7 +29,7 @@ public class Program
                 GenerateKey(arguments["--output"], int.Parse(arguments["--length"]));
                 break;
             default:
-                Console.WriteLine($"Неизвестная команда: {command}");
+                Console.WriteLine($"Unknown: {command}");
                 break;
         }
     }
