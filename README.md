@@ -26,22 +26,21 @@ Download Release
 Go to Releases and download .zip or .exe.
 
 Usage
-# AES-256 (recommended)
+AES-256
+
 ct encrypt -a AES -i document.pdf -o secret.ct -p "password"
-
-# XOR (basic)
-ct encrypt -a XOR -i notes.txt -o notes.xor -k A1B2C3
-
-# AES-256
 ct decrypt -a AES -i secret.ct -o document.pdf -p "pw"
+XOR
 
-# XOR
+ct encrypt -a XOR -i notes.txt -o notes.xor -k A1B2C3
 ct decrypt -a XOR -i notes.xor -o notes.txt -k A1...
 
-# Generate random key
+Generate random key
+
 ct genkey -o mykey.bin -s 256
 
-# Derive key from password
+Derive key from password
+
 ct genkey -o pbkdf2.key -p "pw" -i 100000
 
 Tilek Sakyev COM22A 210104044
